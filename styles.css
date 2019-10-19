@@ -1,11 +1,18 @@
+body {
+  background-image: linear-gradient(to bottom right, #64a7f5, #deecfc);
+}
+
 .container{
   max-width: 900px;
+  background-color: #ebebeb;
 }
 .btn{
-  background: #43d9be;
+  background-image: linear-gradient(to bottom right, #78d1f5, #4790ad);
+  /* background: #78d1f5; */
   color: white;
   outline: none !important;
   box-shadow: none !important;
+  border: none;
 }
 .btn:focus{
   outline: none !important;

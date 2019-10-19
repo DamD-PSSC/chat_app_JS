@@ -45,14 +45,13 @@ const filterItems = item => {
   Array.from(chatButtons.children) //Convert HTML to Array
     .filter(button => !button.textContent.toLowerCase().includes(item))
     .forEach(button => button.classList.add('filtered'));
-  Array.from(chatButtons.children) //Convert HTML to Array
+  Array.from(chatButtons.children)
     .filter(button => button.textContent.toLowerCase().includes(item))
     .forEach(button => button.classList.remove('filtered'));
 }
 search.addEventListener('keyup', ev => {
   const term = search.value.trim().toLowerCase();
   filterItems(term);
-  console.log(term);
 });
 
 // check local storage for the username
