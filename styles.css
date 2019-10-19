@@ -1,5 +1,5 @@
 .container{
-  max-width: 600px;
+  max-width: 900px;
 }
 .btn{
   background: #43d9be;
@@ -9,4 +9,16 @@
 }
 .btn:focus{
   outline: none !important;
+}
+
+.chat-button {
+  margin-bottom: 5px;
+}
+
+.chat-window {
+  height: 500px;
+}
+
+.chat-buttons {
+  height: 450px;
 }
