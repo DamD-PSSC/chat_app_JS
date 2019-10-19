@@ -3,9 +3,11 @@ const chatList = document.querySelector('.chat-list');
 const chatButtons = document.querySelector('.chat-buttons');
 const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
-const updateMsg = document.querySelector('.update-msg');
+const newGroupForm = document.querySelector('.new-group');
+const newGroupMsg = document.querySelector('.create-msg');
 const rooms = document.querySelector('.chat-rooms');
 const search = document.querySelector('.search input');
+const updateMsg = document.querySelector('.update-msg');
 
 // add a new chat
 newChatForm.addEventListener('submit', ev => {
@@ -52,6 +54,15 @@ const filterItems = item => {
 search.addEventListener('keyup', ev => {
   const term = search.value.trim().toLowerCase();
   filterItems(term);
+});
+
+// new chat room
+newGroupForm.addEventListener('submit', ev => {
+  ev.preventDefault();
+  newGroupMsg.innerText = `Function not allowed yet`;
+  setTimeout(() =>  {
+    newGroupMsg.innerText = '';
+  }, 3000);
 });
 
 // check local storage for the username

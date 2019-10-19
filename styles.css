@@ -2,10 +2,6 @@ body {
   background-image: linear-gradient(to bottom right, #64a7f5, #deecfc);
 }
 
-.container{
-  max-width: 900px;
-  background-color: #ebebeb;
-}
 .btn{
   background-image: linear-gradient(to bottom right, #78d1f5, #4790ad);
   /* background: #78d1f5; */
@@ -14,8 +10,14 @@ body {
   box-shadow: none !important;
   border: none;
 }
+
 .btn:focus{
   outline: none !important;
+}
+
+.container{
+  max-width: 900px;
+  background-color: #ebebeb;
 }
 
 .chat-button {
@@ -30,10 +32,10 @@ body {
   height: 450px;
 }
 
-.time {
-  font-size: 12px;
-}
-
 .filtered {
   display: none;
+}
+
+.time {
+  font-size: 12px;
 }

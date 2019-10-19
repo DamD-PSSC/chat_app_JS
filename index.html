@@ -14,6 +14,8 @@
   <div class="container my-4 border rounded">
       <i class="chat-logo far fa-comments fa-2x pr-1 d-inline"></i>
       <h1 class="my-4 text-left pl-1 d-inline">Chat App</h1>
+
+      <!-- section chat GUI -->
       <div class="row mt-2">
         <!-- buttons for chatrooms -->
         <div class="chat-rooms mb-3 text-center col col-4">
@@ -26,7 +28,11 @@
               <button class="btn chat-button" id="general">#general</button>
               <button class="btn chat-button" id="gaming">#gaming</button>
               <button class="btn chat-button" id="music">#music</button>
-              <button class="btn chat-button" id="ninjas">#ninjas</button>
+              <button class="btn chat-button" id="Lorem">#lorem</button>
+              <button class="btn chat-button" id="ipsum">#ipsum</button>
+              <button class="btn chat-button" id="travel">#travel</button>
+              <button class="btn chat-button" id="cars">#cars</button>
+              <button class="btn chat-button" id="off">#off</button>
             </div>
           </div>
         </div>
@@ -35,6 +41,8 @@
           <ul class="chat-list list-group"></ul>
         </div>
       </div>
+
+      <!-- section new & update -->
       <div class="row">
         <!-- new chat form -->
         <form class="new-chat my-3 col col-12">
@@ -60,7 +68,7 @@
                 <input type="submit" class="btn" value="update">
               </div>
             </div>
-            <div class="update-msg"></div>
+            <div class="update-msg text-muted"></div>
           </form>
           <!-- new group form -->
           <form class="new-group my-3 col col-12">
@@ -73,12 +81,13 @@
                 <input type="submit" class="btn" value="create">
               </div>
             </div>
-            <div class="create-msg"></div>
+            <div class="create-msg text-muted"></div>
           </form>
         </div>
       </div>
   </div>
 
+<!-- db section -->
 <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
@@ -87,21 +96,21 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
- // Your web app's Firebase configuration
- var firebaseConfig = {
-   apiKey: "AIzaSyDTUdyYI1jItT-zHi1Ao7fNbvbE4LAxlmg",
-   authDomain: "chat-568b8.firebaseapp.com",
-   databaseURL: "https://chat-568b8.firebaseio.com",
-   projectId: "chat-568b8",
-   storageBucket: "chat-568b8.appspot.com",
-   messagingSenderId: "423097341503",
-   appId: "1:423097341503:web:feeb8f23c5b2874097ca8a"
- };
- // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-</script>
+  <script>
+   // Your web app's Firebase configuration
+   var firebaseConfig = {
+     apiKey: "AIzaSyDTUdyYI1jItT-zHi1Ao7fNbvbE4LAxlmg",
+     authDomain: "chat-568b8.firebaseapp.com",
+     databaseURL: "https://chat-568b8.firebaseio.com",
+     projectId: "chat-568b8",
+     storageBucket: "chat-568b8.appspot.com",
+     messagingSenderId: "423097341503",
+     appId: "1:423097341503:web:feeb8f23c5b2874097ca8a"
+   };
+   // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
   <script src="scripts/chat.js"></script>
   <script src="scripts/ui.js"></script>
   <script src="scripts/app.js"></script>

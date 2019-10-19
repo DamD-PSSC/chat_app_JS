@@ -2,14 +2,15 @@ class Chatroom {
   constructor(room, username) {
     this.room = room;
     this.username = username;
-    this.chats = db.collection('chats');
+    this.chats = db.collection('chats'); // collection choosing
     this.unsub;
   }
+
   async addChat(message){
     // chat object
     const now = new Date();
     const chat = {
-      message,
+      message, // short version of message: this.message
       username: this.username,
       room: this.room,
       created_at: firebase.firestore.Timestamp.fromDate(now)
@@ -18,6 +19,7 @@ class Chatroom {
     const response = await this.chats.add(chat);
     return response;
   }
+
   // set real time listener
   getChats(callback){
     this.unsub = this.chats
@@ -32,10 +34,14 @@ class Chatroom {
         });
       });
   }
+
+  // func for update username (also it look into local storage)
   updateName(username){
     this.username = username;
     localStorage.setItem('username', username);
   }
+
+  // room update with disabling real time listener
   updateRoom(room){
     this.room = room;
     console.log('room updated');
