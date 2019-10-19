@@ -22,3 +22,11 @@
 .chat-buttons {
   height: 450px;
 }
+
+.time {
+  font-size: 12px;
+}
+
+.filtered {
+  display: none;
+}

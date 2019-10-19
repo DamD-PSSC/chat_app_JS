@@ -15,10 +15,10 @@ class ChatUI {
     );
     const html = `
       <li class="list-group-item">
-        <span class="username">${data.username}</span>
+        <span class="username">${data.username} says:</span>
         <span class="message">${data.message}</span>
-        <div class="time">${when}</div>
+        <div class="time text-muted">${when}</div>
     `;
     this.list.innerHTML += html;
-  }
+  };
 }

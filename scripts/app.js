@@ -1,9 +1,11 @@
 // dom queries
 const chatList = document.querySelector('.chat-list');
+const chatButtons = document.querySelector('.chat-buttons');
 const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
 const updateMsg = document.querySelector('.update-msg');
 const rooms = document.querySelector('.chat-rooms');
+const search = document.querySelector('.search input');
 
 // add a new chat
 newChatForm.addEventListener('submit', ev => {
@@ -36,6 +38,21 @@ rooms.addEventListener('click', ev => {
     chatroom.updateRoom(ev.target.getAttribute('id'));
     chatroom.getChats(chat => chatUI.render(chat));
   }
+});
+
+// filter chatrooms
+const filterItems = item => {
+  Array.from(chatButtons.children) //Convert HTML to Array
+    .filter(button => !button.textContent.toLowerCase().includes(item))
+    .forEach(button => button.classList.add('filtered'));
+  Array.from(chatButtons.children) //Convert HTML to Array
+    .filter(button => button.textContent.toLowerCase().includes(item))
+    .forEach(button => button.classList.remove('filtered'));
+}
+search.addEventListener('keyup', ev => {
+  const term = search.value.trim().toLowerCase();
+  filterItems(term);
+  console.log(term);
 });
 
 // check local storage for the username
